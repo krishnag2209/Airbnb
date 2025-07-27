@@ -1,0 +1,97 @@
+<%- layout("/layouts/boilerplate.ejs") %>
+<!-- 
+   
+    <h3>All Listings</h3>      
+<br> -->
+
+
+<style>
+    .filters{
+       display: flex;
+        flex-wrap: wrap;      
+    }
+
+    .filter{
+       text-align: center;
+        margin-top: 2rem;
+        margin-right: 2rem;
+        opacity: 0.7;
+
+    }
+    .filter:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+</style>
+<div class="filters">
+      <div class="filter">
+        <div><i class="fa-solid fa-umbrella-beach"></i></div>
+              <p>Beach</p>
+        </i>
+    </div>
+     <div class="filter">
+        <div><i class="fa-solid fa-house"></i></div>
+            <p>Home</p>
+        </i>
+    </div>
+    <div class="filter">
+        <div><i class="fa-solid fa-city"></i></div>
+              <p>Cities</p>
+        </i>
+    </div>
+    <div class="filter">
+        <div><i class="fa-solid fa-fire-flame-simple"></i></div>
+            <p>Trendings</p>
+        </i>
+    </div>
+    <div class="filter">
+        <div><i class="fa-solid fa-bed"></i></div>
+              <p>Rooms</p>
+        </i>
+    </div>
+     <div class="filter">
+        <div><i class="fa-brands fa-fort-awesome"></i></div>
+            <p>Castles</p>
+        </i>
+    </div>
+    <div class="filter">
+        <div><i class="fa-solid fa-mountain-sun"></i></div>
+              <p>Mountain</p>
+        </i>
+    </div>
+     <div class="filter">
+        <div><i class="fa-solid fa-mountain-city"></i></div>
+            <p>Iconic place</p>
+        </i>
+    </div>
+    <div class="filter">
+        <div><i class="fa-solid fa-person-swimming"></i></div>
+              <p>Amazing pools</p>
+        </i>
+    </div>
+    <div class="filter">
+        <div><i class="fa-solid fa-tractor"></i></div>
+            <p>Farms</p>
+        </i>
+    </div>
+</div>
+
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3 ">
+<% for (let listing of AllListing) { %>
+        <div class="card cols listing.card"  >
+            <!-- ✅ Removed space in `src` attribute -->
+           <a href='/listings/<%= listing._id %>' class="card-link">
+            <img src="<%= listing.image.url %>" class="card-img-top" alt="Listing image" style="height: 20rem;"> 
+            <div class="card-img-overlay"></div>
+            <div class="card-body">
+                <p class="card-text">
+                    <b><%= listing.title %></b> <br>
+                    &#8377; <%= listing.price.toLocaleString("en-IN") %> /night
+                </p>
+            </div>
+            </a>
+        </div>
+    <% } %>
+    </div>
+    
+
