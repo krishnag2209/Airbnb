@@ -1,0 +1,99 @@
+body{
+   display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+
+/* for navbar */
+.fa-airbnb{
+    color: #FF385C;
+}
+
+
+/* For footer */
+.f-info-links a{
+    text-decoration: none;
+    color: black;
+}
+.f-info-links, .f-info-social{
+    width: 100% !important;
+    
+}
+
+.f-info-social i {
+    font-size: 1.3rem;
+    margin-right: 1.2rem;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info{
+  margin-top: 2rem;
+   text-align: center;
+   background-color: #ebebeb;
+   height: 8rem;
+   width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/* images styling :-  */
+.card{
+ border: none !important;
+ margin-bottom: 2rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    /* height: 20rem !important; */
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0% !important;
+}
+.card-text{
+   font-weight: 400 !important;
+}
+.card-link{
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.card-img-overlay{
+    opacity: 0px !important;
+    text-decoration: none !important;
+}
+
+
+.card-img-overlay:hover{
+    opacity: 0.2 !important;
+    background-color: white !important;
+}
+
+.btn-color{
+    text-decoration: none !important;
+    background-color: #FF385C !important;
+}
+
+/* SHOW DATA */
+.show-img{
+    height: 30vh;
+
+}
+.btns{
+display: flex;
+}
+
+.show-card{
+    padding-left: 0%;
+    padding-right: 0%;
+    
+}
